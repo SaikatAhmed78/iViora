@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section id="hero">
       <div>
-        <h1>iSphere Pro</h1>
+        <h1>NeoMac Pro</h1>
         <img src="/title.png" alt="" />
       </div>
 
