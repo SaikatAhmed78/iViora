@@ -214,7 +214,7 @@ body {
       }
 
       h2 {
-        @apply font-semibold text-3xl lg:text-7xl text-white;
+        @apply font-semibold text-3xl lg:text-5xl text-white;
       }
 
       h3 {

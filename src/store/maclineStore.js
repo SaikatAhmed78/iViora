@@ -1,17 +1,22 @@
 import { create } from "zustand";
 
-const useMacbookStore = create((set) => ({
+const defaultState = {
   color: "#2e2c2e",
-  setColor: (color) => set({ color }),
-
   scale: 0.08,
+  lighting: "studio",
+  rotationEnabled: true,
+};
+
+const useMacbookStore = create((set) => ({
+  ...defaultState,
+
+  setColor: (color) => set({ color }),
   setScale: (scale) => set({ scale }),
+  setLighting: (lighting) => set({ lighting }),
+  toggleRotation: () =>
+    set((state) => ({ rotationEnabled: !state.rotationEnabled })),
 
-  // texture: "/videos/feature-1.mp4",
-  // setTexture: (texture) => set({ texture }),
-
-  reset: () =>
-    set({ color: "#2e2c2e", scale: 0.08 }),
+  reset: () => set(defaultState),
 }));
 
 export default useMacbookStore;
